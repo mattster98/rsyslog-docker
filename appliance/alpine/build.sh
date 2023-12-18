@@ -1,1 +1,1 @@
-docker build $* -t rsyslog/syslog_appliance_alpine:latest .
+docker build $* -t mattster98/rsyslog-docker:latest .
