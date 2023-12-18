@@ -21,7 +21,7 @@ jobs:
 
       - name: Run Build script
         working-directory: ./appliance/alpine
-        run: build.sh
+        run: ./build.sh
 
   publish:
     name: Publish to Docker Hub
