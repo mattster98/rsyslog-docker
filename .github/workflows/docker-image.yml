@@ -20,7 +20,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Build script
-        run: appliance/alpine/build.sh
+        working-directory: ./appliance/alpine
+        run: build.sh
 
   publish:
     name: Publish to Docker Hub
