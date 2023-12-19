@@ -12,7 +12,7 @@ RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories \
 	   rsyslog-mmutf8fix \
 	   rsyslog-omrelp \
 	   rsyslog-omstdout \
-           logrotate
+	   logrotate
 # Added logrotate to see if that helps
 RUN	adduser -s /bin/ash -D rsyslog rsyslog \
 	&& echo "rsyslog ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
