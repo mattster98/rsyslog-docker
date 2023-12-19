@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run Build script
         run: ./build.sh
@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
       - name: Clean git Checkout
         if: success()
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build, tag and push the dev Docker image
         if: success() && github.ref == 'refs/heads/dev'
         uses: docker/build-push-action@v2
