@@ -51,7 +51,7 @@ jobs:
         if: success() && github.ref == 'refs/heads/dev'
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./appliance/alpine
           push: true
           no-cache: true
           platforms: ${{ env.PLATFORMS }}
@@ -63,7 +63,7 @@ jobs:
         if: success() && github.ref == 'refs/heads/master'
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./appliance/alpine
           push: true
           no-cache: true
           platforms: ${{ env.PLATFORMS }}
