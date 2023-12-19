@@ -3,7 +3,8 @@ LABEL   maintainer="rgerhards@adiscon.com"
 COPY	rsyslog@lists.adiscon.com-5a55e598.rsa.pub /etc/apk/keys/rsyslog@lists.adiscon.com-5a55e598.rsa.pub
 RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories
 RUN	echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/main" >> /etc/apk/repositories
-RUN	apk --no-cache update
+RUN	apk --no-cache --allow-untrusted update 
+RUN	apk fix --upgrade --allow-untrusted alpine-keys
 RUN	apk add --no-cache \
 	   rsyslog \
 	   rsyslog-elasticsearch \
