@@ -5,6 +5,7 @@ RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories
 RUN	echo "http://dl-cdn.alpinelinux.org/alpine/v3.10/main" >> /etc/apk/repositories
 RUN	apk --no-cache --allow-untrusted update 
 #RUN	apk fix --upgrade --allow-untrusted alpine-keys
+RUN	apk remove --no-cache --allow-untrusted libressl
 RUN	apk add --no-cache --allow-untrusted \
 	   rsyslog \
 	   rsyslog-elasticsearch \
